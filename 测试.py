@@ -2,6 +2,25 @@
 import socket
 import os
 import platform
+
+
+
+from threading import Thread
+
+def lockMouse(*args):
+    import time
+    import ctypes
+    for i in range(100):
+        #print("锁定: "+str(i))
+        ctypes.WinDLL('user32.dll').SetCursorPos(0,0)
+        time.sleep(0.1)
+t1=Thread(target=lockMouse, args=("线程1",))
+t1.start()
+import time
+time.sleep(20)
+
+t1.start()
+
 host_name = socket.gethostname() 
 print(host_name)
 print(platform.uname())
@@ -34,3 +53,7 @@ import ctypes
 ret=ctypes.WinDLL('Kernel32.dll').Beep(2000,1000)
 print(ret)
 print(os.popen('cmd').read())
+
+
+
+

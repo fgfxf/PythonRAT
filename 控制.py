@@ -22,21 +22,39 @@ def UnpackLen(len_data):
     recvLen=struct.unpack('i',len_data)
     return int(recvLen[0])
 
+def BigReceive(sock,Totalsize):
+    #大文件分块保存到内存
+    #超大数据请不要用这个保存
+    Total_data=b''
+    tempnum=0
+    while(tempnum<Totalsize):
+        data=sock.recv(1024)
+        tempnum+=len(data)
+        print("接受到数据 "+ str(len(data)))
+        Total_data+=data
+    return Total_data
+
+def BigFileReceive(filename,sock,Totalsize):
+    #大文件分块保存到文件
+    file=open(filename,'wb')    
+    tempnum=0
+    while(tempnum<Totalsize):
+        data=sock.recv(1024)
+        tempnum+=len(data)
+        print("接受到数据 "+ str(len(data)))
+        file.write(data)
+    file.close()
+    
+    
 def screenshot(ConnSock,*args):
     ConnSock.send(PackLen(1));
     print("---------screenshot---------")
     len_data=ConnSock.recv(4)#接受4字节数据大小
     recvLen=UnpackLen(len_data)
+    print("截图大小:"+str(recvLen))
     #保存文件
     fileName='screenshot.jpg'
-    file=open(fileName,'wb')
-    for i in range(int(recvLen/1024)):
-        buf=ConnSock.recv(1024)
-        file.write(buf)
-    buf=ConnSock.recv(int(recvLen%1024))
-    file.write(buf)
-    file.close()
-    
+    BigFileReceive(fileName,ConnSock,recvLen)
     
     return
 
@@ -46,7 +64,7 @@ def sysinfo(ConnSock,*args):
     len_data=ConnSock.recv(4)#接受4字节数据大小
     recvLen=UnpackLen(len_data)
     #接受全部数据
-    sysData=ConnSock.recv(recvLen)
+    sysData=BigReceive(ConnSock,recvLen)
     sysData = json.loads(sysData.decode('utf-8'))
     for i in sysData.keys():
         print(str(i)+ ' : '+str(sysData[i]))
@@ -57,7 +75,7 @@ def systeminfo(ConnSock,*args):
     len_data=ConnSock.recv(4)#接受4字节数据大小
     recvLen=UnpackLen(len_data)
     #接受全部数据
-    sysData=ConnSock.recv(recvLen)
+    sysData=BigReceive(ConnSock,recvLen)
     sysData=sysData.decode('utf-8')
     print(sysData)
     
@@ -84,6 +102,11 @@ def mouse(ConnSock,*args):
     ConnSock.send(PackLen(PosY));
     print("mouse send ok.")
 
+def lockmouse(ConnSock,*args):
+    print("---------lockmouse 10 s--------")
+    ConnSock.send(PackLen(6));
+    print("mouse lock 10 second ok.")
+
 def Beep(ConnSock,*args):
     print("---------Beep--------")
     ConnSock.send(PackLen(5));
@@ -108,6 +131,7 @@ CommandList = {
     3:systeminfo,
     4:mouse,
     5:Beep,
+    6:lockmouse,
 
     99:close
     }

