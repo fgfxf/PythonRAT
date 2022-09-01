@@ -1,7 +1,5 @@
 #_*_ coding:utf-8 _*_
 
-
-
 #
 # python Controller
 # fgfxf China HeNan Haust
@@ -9,7 +7,7 @@
 import socket
 import json
 import struct
-
+import sys
 
 def PackLen(dwSize):
     #输入:长度
@@ -30,7 +28,10 @@ def BigReceive(sock,Totalsize):
     while(tempnum<Totalsize):
         data=sock.recv(1024)
         tempnum+=len(data)
-        print("接受到数据 "+ str(len(data)))
+        print("\r", end="")#\r不带\n，后面一行的print
+        print("Download progress: {}%: ".format(int(tempnum*100/Totalsize)), end="")
+        sys.stdout.flush()
+        sys.stdout.flush()
         Total_data+=data
     return Total_data
 
@@ -41,7 +42,10 @@ def BigFileReceive(filename,sock,Totalsize):
     while(tempnum<Totalsize):
         data=sock.recv(1024)
         tempnum+=len(data)
-        print("接受到数据 "+ str(len(data)))
+        #print("接受到数据 "+ str(len(data)))
+        print("\r", end="")
+        print("Download progress: {}%: ".format(int(tempnum*100/Totalsize)), end="")
+        sys.stdout.flush()
         file.write(data)
     file.close()
     
@@ -118,6 +122,33 @@ def close(ConnSock,*args):
     ConnSock.close()
     exit(0)
 
+def wget(ConnSock,*args):
+    argStr=args[0]
+    argStr=argStr.strip()#(去除两侧空格)
+    #python do while
+    while(True):
+        lenArg1=len(argStr)
+        argStr=argStr.replace('  ',' ')
+        LenArg2=len(argStr)
+        if(LenArg2 == lenArg1):
+            break
+    argList=argStr.split()
+    if(len(argList) <2):
+        print("usage: wget <url> <name>")
+        return
+    ConnSock.send(PackLen(7));
+    print("---------wget--------")
+    print("download from "+str(argList[0])+" to "+str(argList[1]))
+    url=bytes(argList[0].encode('utf-8'))
+    ConnSock.sendall(PackLen(len(url)))
+    ConnSock.sendall(url)
+    
+    name=bytes(argList[1].encode('utf-8'))
+    ConnSock.sendall(PackLen(len(name)))
+    ConnSock.sendall(name)
+
+    
+    
 def default(ConnSock,*args):
     print("输入错误，请重新输入命令!")
     print(len(args[0]))
@@ -132,7 +163,9 @@ CommandList = {
     4:mouse,
     5:Beep,
     6:lockmouse,
-
+    7:wget,
+    
+    
     99:close
     }
 
@@ -151,7 +184,7 @@ def printCommand():
 
 if __name__ == '__main__':
     Host = '0.0.0.0'
-    Port = 3066
+    Port = 30663
 
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.bind((Host,Port))

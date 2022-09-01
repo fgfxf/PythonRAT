@@ -1,0 +1,1655 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://blog.csdn.net/weixin_45959515/article/details/107506334"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid": "blog", "spm":"1001.2101"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="applicable-device" content="pc">
+    <link  href="https://g.csdnimg.cn/static/logo/favicon32.ico"  rel="shortcut icon" type="image/x-icon" />
+    <title>python try catch_coder613的博客-CSDN博客_python trycatch</title>
+    <script>
+      (function(){ 
+        var el = document.createElement("script"); 
+        el.src = "https://s3a.pstatp.com/toutiao/push.js?1abfa13dfe74d72d41d83c86d240de427e7cac50c51ead53b2e79d40c7952a23ed7716d05b4a0f683a653eab3e214672511de2457e74e99286eb2c33f4428830"; 
+        el.id = "ttzz"; 
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(el, s);
+      })(window)
+    </script>
+        <meta name="keywords" content="python trycatch">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"python trycatch"}'>
+    <meta name="description" content="try :    print(1 / 0)except Exception as e :    print(e)finally :    print('最后执行')">
+    <script src="//g.csdnimg.cn/tingyun/1.8.5/blog.js" type='text/javascript'></script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/detail_enter-dad2b31799.min.css">
+    <style>
+        #content_views pre{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+            user-select: none; 
+        }
+        #content_views pre code{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+            user-select: none; 
+        }
+    </style>
+    <script type="application/ld+json">{"@context":"https://ziyuan.baidu.com/contexts/cambrian.jsonld","@id":"https://blog.csdn.net/weixin_45959515/article/details/107506334","appid":"1638831770136827","pubDate":"2020-07-22T10:16:31","title":"python try catch_coder613的博客-CSDN博客_python trycatch","upDate":"2020-07-22T10:16:31"}</script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-whitemove/skin-whitemove-2af9149bdc.min.css">
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isCorporate = false;//注释删除enterprise
+        var username =  "weixin_45959515";
+        var skinImg = "white";
+        var blog_address = "https://blog.csdn.net/weixin_45959515";
+        var currentUserName = "";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/weixin_45959515/article/details/107506334";
+        var blogUrl = "https://blog.csdn.net/";
+        var avatar = "https://profile.csdnimg.cn/C/0/C/3_weixin_45959515";
+        var articleTitle = "python try catch";
+        var articleDesc = "try :    print(1 / 0)except Exception as e :    print(e)finally :    print(\'最后执行\')";
+        var articleTitles = "python try catch_coder613的博客-CSDN博客_python trycatch";
+        var nickName = "coder613";
+        var articleDetailUrl = "https://blog.csdn.net/weixin_45959515/article/details/107506334";
+        if(window.location.host.split('.').length == 3) {
+            blog_address = blogUrl + username;
+        }
+        var skinStatus = "White";
+        var blogStaticHost = "https://csdnimg.cn/release/blogv2/"
+        var mallTestStyle = "control"
+    </script>
+    <script src="https://g.csdnimg.cn/??fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+    <script src="https://dup.baidustatic.com/js/ds.js"></script>
+</head>
+  <body class="nodata " style="">
+        <script>
+            var toolbarSearchExt = '{"landingWord":["python trycatch"],"queryWord":"","tag":[],"title":"python try catch"}';
+        </script>
+    <script src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css" />
+
+<script>
+    var articleId = 107506334;
+    var commentscount = 0;
+    var curentUrl = "https://blog.csdn.net/weixin_45959515/article/details/107506334";
+    var myUrl = "https://my.csdn.net/";
+    var highlight = ["trycatch","python","catch","try","tr"];//高亮数组
+    var isRecommendModule = true;
+    var isBaiduPre = true;
+    var baiduCount = 2;
+    var setBaiduJsCount = 10;
+    var share_card_url = "https://app-blog.csdn.net/share?article_id=107506334&username=weixin_45959515"
+	var articleType = 1;
+    var baiduKey = "python trycatch";
+    var userNewReport = true;
+    var needInsertBaidu = true;
+    var recommendRegularDomainArr = ["blog.csdn.net/.+/article/details/","download.csdn.net/download/","edu.csdn.net/course/detail/","ask.csdn.net/questions/","bbs.csdn.net/topics/","www.csdn.net/gather_.+/"]
+    var codeStyle = "";
+    var baiduSearchType = "baidulandingword";
+    var canRead = true;
+    var blogMoveHomeArticle = false;
+    var showPcWindowAd = false;
+    var showHeadWord = true;
+    var showSearchText = "";
+    var linkPage = true;
+    var articleSource = 1;
+    var articleReport = '{"pid": "blog", "spm":"1001.2101"}';
+    var isShowToQuestion = false;
+    var baiduSearchChannel = 'pc_relevant'
+    var baiduSearchIdentification = '.pc_relevant_multi_platform_whitelistv1'
+    var distRequestId = '1659949678340_86120'
+    var initRewardObject = {
+        giver: currentUserName,
+        anchor: username,
+        articleId: articleId,
+        sign: ''
+    }
+    var isLikeStatus = false;
+    var isUnLikeStatus = false;
+    var studyLearnWord = "";
+    var isCurrentUserVip = false;
+    var testNewStyle = "oldStyle"
+    var contentViewsHeight = 3820;
+    var contentViewsCount = 10;
+    var contentViewsCountLimit = 40;
+    var isShowConcision = false;
+    var isCookieConcision = false
+    var isHasDirectoryModel = false
+    var isShowSideModel = false
+    var isShowDirectoryModel = true
+    function getCookieConcision(sName){
+        var allCookie = document.cookie.split("; ");
+        for (var i=0; i < allCookie.length; i++){
+            var aCrumb = allCookie[i].split("=");
+            if (sName == aCrumb[0])
+                return aCrumb[1];
+        }
+        return null;
+    }
+    if (getCookieConcision('blog_details_concision') && getCookieConcision('blog_details_concision') == 0){
+        isCookieConcision = true
+        isShowSideModel = true
+        isShowDirectoryModel = false
+    }
+</script>
+<div class="main_father clearfix d-flex justify-content-center " style="height:100%;"> 
+    <div class="container clearfix " id="mainBox">
+        <script>
+        if(!isCookieConcision){
+            $('.main_father').removeClass('mainfather-concision')
+            $('.main_father .container').removeClass('container-concision')
+        }
+        </script>
+        <main>
+<script type="text/javascript">
+    function getQueryString(name) {   
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+      var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+      if( r != null ) return decodeURIComponent( r[2] ); return '';   
+    }
+    function stripscript(s){ 
+      var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？%]") 
+      var rs = ""; 
+      for (var i = 0; i < s.length; i++) { 
+        rs = rs+s.substr(i, 1).replace(pattern, ''); 
+      } 
+      return rs; 
+    }
+    var blogHotWords = stripscript(getQueryString('utm_term')).length > 1 ? stripscript(getQueryString('utm_term')) : ''
+</script>
+<div class="blog-content-box">
+        <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">python try catch</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/weixin_45959515" target="_blank" rel="noopener">coder613</a>
+                    <img class="article-time-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png" alt="">
+                    <span class="time">于&nbsp;2020-07-22 10:16:31&nbsp;发布</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png" alt="">
+                    <span class="read-count">8951</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click='{"mod":"popu_823","spm":"1001.2101.3001.4232","ab":"new"}'>
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive2.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            5
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/weixin_45959515/article/details/107506334" target="_blank">https://blog.csdn.net/weixin_45959515/article/details/107506334</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blogHuaweiyunAdvert"></div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b3c43d3711.css">
+                <div id="content_views" class="markdown_views prism-atom-one-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <pre><code class="prism language-c">try <span class="token punctuation">:</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">)</span>
+except Exception as e <span class="token punctuation">:</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+finally <span class="token punctuation">:</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#39;最后执行&#39;</span><span class="token punctuation">)</span>
+</code></pre>
+                </div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-22a2fefd3b.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-4f8fbf9108.css" rel="stylesheet">
+        </div>
+        <div id="treeSkill"></div>
+    </article>
+  <script>
+  $(function() {
+    setTimeout(function () {
+      var mathcodeList = document.querySelectorAll('.htmledit_views img.mathcode');
+      if (mathcodeList.length > 0) {
+        var testImg = new Image();
+        testImg.onerror = function () {
+          mathcodeList.forEach(function (item) {
+            $(item).before('<span class="img-codecogs">\\(' + item.alt + '\\)</span>');
+            $(item).remove();
+          })
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        }
+        testImg.src = mathcodeList[0].src;
+      }
+    }, 1000)
+  })
+  </script>
+</div>
+<div class="more-toolbox-new" id="toolBarBox">
+    <div class="left-toolbox">
+        <div class="toolbox-left">
+            <div class="profile-box"><a class="profile-href" target="_blank" href="https://blog.csdn.net/weixin_45959515"><img class="profile-img" src="https://profile.csdnimg.cn/C/0/C/3_weixin_45959515"><span class="profile-name">coder613</span></a></div>
+            <div class="profile-attend">
+                    <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;" data-report-view='{"mod":"1592215036_002","spm":"1001.2101.3001.4232","extend1":"关注"}'>关注</a>
+                <a class="tool-item-follow active-animation" style="display:none;">关注</a>
+            </div>
+        </div>
+        <div class="toolbox-middle">
+        <ul class="toolbox-list">
+            <li class="tool-item tool-item-size tool-active is-like" id="is-like">
+            <a class="tool-item-href">
+                <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt="">
+                <img class="isactive" style="display:none" id="is-like-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021Active.png" alt="">
+                <img class="isdefault" style="display:block" id="is-like-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021White.png" alt="">  
+                <span id="spanCount" class="count ">
+                        4
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">点赞</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-unlike" id="is-unlike">
+            <a class="tool-item-href">
+                <img class="isactive" style="margin-right:0px;display:none" id="is-unlike-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnHeart2021Active.png" alt="">
+                <img class="isdefault" style="margin-right:0px;display:block" id="is-unlike-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnHeart2021White.png" alt="">
+                <span id="unlikeCount" class="count "></span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">踩</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-comment">
+            <a class="tool-item-href" href="#commentBox" data-report-click='{"spm":"1001.2101.3001.7009"}'>
+                <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newComment2021White.png" alt="">
+                <span class="count">
+                    0
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">评论</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-collection ">
+            <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"popu_824","spm":"1001.2101.3001.4130","ab":"new"}'>
+                <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                <img class="isdefault" id="is-collection-img" style="display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectWhite.png" alt="">
+                <img class="isactive" id="is-collection-imgactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectActive.png" alt="">
+                <span class="count get-collection " id="get-collection">
+                    5
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">收藏</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-reward">
+                <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"popu_830","spm":"1001.2101.3001.4237","dest":"","ab":"new"}'>
+                <img class="isdefault reward-bt" id="rewardBtNew" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newRewardWhite.png" alt="打赏">
+                <span class="count"></span>
+                </a>
+                <div class="tool-hover-tip"><span class="text space">打赏</span></div>
+            </li>
+            <li class="tool-item tool-item-bar">
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-QRcode" id="tool-share">
+                <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"1582594662_002","spm":"1001.2101.3001.4129","ab":"new"}'>
+                    <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newShareWhite.png" alt="">
+                </a>
+                <div class="QRcode" id="tool-QRcode">
+                    <p class="title">
+                    扫一扫，分享内容
+                    </p>
+                    <div id='shareCode'></div>
+                    <a id="copyPosterUrl" class="url" data-report-click='{"spm":"1001.2101.3001.7493"}' data-report-view='{"spm":"1001.2101.3001.7493"}'>点击复制链接</a>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div class="toolbox-right">
+        </div>
+    </div>  
+</div>
+<script type=text/javascript crossorigin src="https://csdnimg.cn/release/phoenix/production/qrcode-7c90a92189.min.js"></script>
+<script src="//g.csdnimg.cn/??sharewx/1.2.1/sharewx.js" type="text/javascript"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/user-login/3.0.1/user-login.js"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/collection-box/2.1.0/collection-box.js"></script>
+                <div class="first-recommend-box recommend-box ">
+<div class="recommend-item-box type_download clearfix" data-url="https://download.csdn.net/download/weixin_38529486/12862343"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6661.1","mod":"popu_871","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant_t0.none-task-download-2~default~CTRLIST~AntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~AntiPaid","dest":"https://download.csdn.net/download/weixin_38529486/12862343"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://download.csdn.net/download/weixin_38529486/12862343" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6661.1","mod":"popu_871","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant_t0.none-task-download-2~default~CTRLIST~AntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~AntiPaid","dest":"https://download.csdn.net/download/weixin_38529486/12862343"}'  data-report-query='spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EAntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EAntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Python</em>用<em>Try</em>语句捕获异常的实例方法</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block">09-19</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://download.csdn.net/download/weixin_38529486/12862343" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6661.1","mod":"popu_871","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant_t0.none-task-download-2~default~CTRLIST~AntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~AntiPaid","dest":"https://download.csdn.net/download/weixin_38529486/12862343"}'  data-report-query='spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EAntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EAntiPaid-1-12862343-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">在本篇文章中小编给大家整理了关于<em>Python</em>用<em>Try</em>语句如何捕获异常的相关知识点内容，需要的朋友们参考下。</div>
+			</a>
+		</div>
+	</div>
+</div>
+                </div>
+            <script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_commontools-67de323e6c.min.js" type="text/javascript" async></script>
+            <div class="second-recommend-box recommend-box ">
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_39712611/article/details/113504377"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_39712611/article/details/113504377"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_39712611/article/details/113504377" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_39712611/article/details/113504377"}'  data-report-query='spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em>何时用<em>try</em>_什么时候使用<em>Try</em> <em>Catch</em>(转)</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_39712611" target="_blank"><span class="blog-title">weixin_39712611的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">01-29</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1277
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_39712611/article/details/113504377" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_39712611/article/details/113504377"}'  data-report-query='spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-113504377-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">几条建议：如果无法处理某个异常，那就不要捕获它。如果捕获了一个异常，请不要胡乱处理它。尽量在靠近异常被抛出的地方捕获异常。在捕获异常的地方将它记录到日志中，除非您打算将它重新抛出。按照您的异常处理必须多精细来构造您的方法。需要用几种类型的异常就用几种，尤其是对于应用程序异常。把低层次的异常封装成层次较高程序员较容易理解的异常。尽量输出造成异常的完整数据尽量捕获具有特定含义的异常：比如SqlExce...</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<a id="commentBox" name="commentBox"></a>
+<div id="pcCommentBox" class="comment-box comment-box-new2 unlogin-comment-box-new" style="display:none">
+	<div class="unlogin-comment-model">
+			<span class="unlogin-comment-tit">参与评论</span>
+			<span class="unlogin-comment-text">您还未登录，请先</span>
+			<span class="unlogin-comment-bt">登录</span>
+			<span class="unlogin-comment-text">后发表或查看评论</span>
+	</div>
+</div>
+            <div class="recommend-box insert-baidu-box recommend-box-style ">
+                <div class="recommend-item-box no-index" style="display:none"></div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_41529093/article/details/122344987"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_41529093/article/details/122344987"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_41529093/article/details/122344987" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_41529093/article/details/122344987"}'  data-report-query='spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em>的<em>try</em>和<em>catch</em></div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_41529093" target="_blank"><span class="blog-title">weixin_41529093的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">01-06</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					945
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_41529093/article/details/122344987" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_41529093/article/details/122344987"}'  data-report-query='spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-122344987-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">仅作为记录，大佬请跳过。
+<em>python</em>是<em>try</em>和except
+
+参考
+传送门
+
+</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://dongzhixiao.blog.csdn.net/article/details/79666708"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://dongzhixiao.blog.csdn.net/article/details/79666708"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://dongzhixiao.blog.csdn.net/article/details/79666708" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://dongzhixiao.blog.csdn.net/article/details/79666708"}'  data-report-query='spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em>异常处理和日志处理</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_19528953" target="_blank"><span class="blog-title">冬之晓</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">03-23</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					3414
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://dongzhixiao.blog.csdn.net/article/details/79666708" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://dongzhixiao.blog.csdn.net/article/details/79666708"}'  data-report-query='spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-79666708-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>python</em>异常处理和日志处理
+
+今天，总结一下最近编程使用的<em>python</em>异常处理和日志处理的感受，其实异常处理是程序编写时非常重要 
+的一块，但是我一开始学的语言是C++，这门语言中没有强制要求使用<em>try</em>...<em>catch</em>语句，因此我通常 
+编写代码的时候忽略了这一块，直到开始学习java的时候，发现好多时候编写代码必须加上<em>try</em>...<em>catch</em> 
+模块，然而我每次都不深入理解，仅仅使用eclip...</div>
+			</a>
+		</div>
+	</div>
+</div>
+		<dl id="recommend-item-box-tow" class="recommend-item-box type_blog clearfix">
+			
+		</dl>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_44772874/article/details/108934084"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_44772874/article/details/108934084"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_44772874/article/details/108934084" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_44772874/article/details/108934084"}'  data-report-query='spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">异常</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_44772874" target="_blank"><span class="blog-title">weixin_44772874的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-06</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					60
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_44772874/article/details/108934084" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_44772874/article/details/108934084"}'  data-report-query='spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-108934084-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">异常
+异常指的就是程序在运行时出现错误时通知调用者的一种机制（运行时指的是程序已经编译通过得到 class 文件了，再由 JVM 执行过程中出现的错误）
+<em>try</em>{
+	有可能出现异常的语句；
+	// 发生异常的代码，之后的代码是不会执行的
+}[<em>catch</em>(异常类型 异常对象){
+	出现异常后的处理行为；
+	//e.printStack<em>Tr</em>ace();  打印异常的信息
+}][finally{
+	异常的出口（用于处理善后工作, 会在最后执行(无论是否存在异常, finally中的代码一定都会执行到)）
+	// </div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/jay_yxm/article/details/103248375"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"5","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/jay_yxm/article/details/103248375"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/jay_yxm/article/details/103248375" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"5","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/jay_yxm/article/details/103248375"}'  data-report-query='spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em> 常用语法及命令（五） 异常(<em>try</em> <em>catch</em>)  assert  else   with</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/jay_yxm" target="_blank"><span class="blog-title">damonlearning的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-03</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1760
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/jay_yxm/article/details/103248375" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"5","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/jay_yxm/article/details/103248375"}'  data-report-query='spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103248375-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>Python</em>异常
+
+1、<em>Python</em>标准异常总结
+
+AssertionError        断言语句（assert）失败
+At<em>tr</em>ibuteError         尝试访问未知的对象属性
+EOFError               用户输入文件末尾标志EOF（C<em>tr</em>l+d）
+FloatingPointError   ...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_39664995/article/details/110314465"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39664995/article/details/110314465"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_39664995/article/details/110314465" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39664995/article/details/110314465"}'  data-report-query='spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em> <em>try</em> <em>catch</em> 所有异常_<em>python</em>错误处理&mdash;<em>try</em>&hellip;<em>catch</em>&hellip;finally、调用栈分析</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_39664995" target="_blank"><span class="blog-title">weixin_39664995的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">11-28</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					3650
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_39664995/article/details/110314465" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39664995/article/details/110314465"}'  data-report-query='spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-110314465-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">高级语言包括<em>python</em>一般都内置了一套<em>try</em>&hellip;<em>catch</em>&hellip;finally的错误处理机制：&gt;&gt;&gt; <em>try</em>:...print(&#39;<em>try</em>...&#39;)...     r= 10 /0...print(&#39;result:&#39;, r)...exceptZeroDivisionError as e:...print(&#39;except:&#39;, e)...finally:...print(&#39;finally...&#39;)...t...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_39827775/article/details/111733787"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39827775/article/details/111733787"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_39827775/article/details/111733787" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39827775/article/details/111733787"}'  data-report-query='spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em> <em>try</em> <em>catch</em>语句_Java <em>try</em> <em>catch</em>语句</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_39827775" target="_blank"><span class="blog-title">weixin_39827775的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-20</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					406
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_39827775/article/details/111733787" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39827775/article/details/111733787"}'  data-report-query='spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-111733787-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">在 Java 中通常采用 <em>try</em> <em>catch</em> 语句来捕获异常并处理。语法格式如下：<em>try</em> {逻辑代码块1;} <em>catch</em>(ExceptionType e) {处理代码块1;}在以上语法中，把可能引发异常的语句封装在 <em>try</em> 语句块中，用以捕获可能发生的异常。如果 <em>try</em> 语句块中发生异常，那么一个相应的异常对象就会被拋出，然后 <em>catch</em> 语句就会依据所拋出异常对象的类型进行捕获，并处理。处理之后...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/lwgkzl/article/details/81059433"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lwgkzl/article/details/81059433"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/lwgkzl/article/details/81059433" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lwgkzl/article/details/81059433"}'  data-report-query='spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em>中的<em>try</em>-<em>catch</em>-finally-else简介</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/lwgkzl" target="_blank"><span class="blog-title">lwgkzl的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">07-16</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					4万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/lwgkzl/article/details/81059433" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lwgkzl/article/details/81059433"}'  data-report-query='spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-81059433-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">一.<em>try</em>/<em>catch</em>简介&nbsp;&nbsp;&nbsp;&nbsp;<em>try</em>/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（<em>python</em>作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；而<em>try</em>/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合。即如果不想程序因为异常情况而中断，就可以用<em>try</em>来捕获，然...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/cunjiu9486/article/details/109074729"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/cunjiu9486/article/details/109074729"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/cunjiu9486/article/details/109074729" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/cunjiu9486/article/details/109074729"}'  data-report-query='spm=1001.2101.3001.6650.9&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Python</em> <em>Try</em> <em>Catch</em>异常教程</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/cunjiu9486" target="_blank"><span class="blog-title">cunjiu9486的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-10</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/cunjiu9486/article/details/109074729" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/cunjiu9486/article/details/109074729"}'  data-report-query='spm=1001.2101.3001.6650.9&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-109074729-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">As a developer, we have a lot of thoughts about the applications and features. Implementing them a tedious task. During the implementation, we can make mistakes. Those mistakes can be related to appli...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/qq_30404573/article/details/102712895"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"10","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_30404573/article/details/102712895"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/qq_30404573/article/details/102712895" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"10","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_30404573/article/details/102712895"}'  data-report-query='spm=1001.2101.3001.6650.10&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">【<em>Python</em>】异常处理，<em>try</em>、<em>catch</em>、else、finally</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_30404573" target="_blank"><span class="blog-title">甲客实验室</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-23</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1284
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/qq_30404573/article/details/102712895" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"10","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_30404573/article/details/102712895"}'  data-report-query='spm=1001.2101.3001.6650.10&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-10-102712895-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">基本形式：
+#可能发生异常的程序块
+<em>try</em>：
+	block_<em>try</em>
+#第1种except形式
+except Exception1:
+	block_when_exception1_happen
+#第2种except形式，捕获多种异常	
+except (Exception2, Exception3,Exception4):
+	block_when_exception2_or_3_or_4_happen...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_39815943/article/details/110063759"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"11","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39815943/article/details/110063759"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_39815943/article/details/110063759" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"11","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39815943/article/details/110063759"}'  data-report-query='spm=1001.2101.3001.6650.11&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em>提供什么机制处理程序运行错误_C, Go, <em>Python</em>的错误处理和异常机制杂谈</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_39815943" target="_blank"><span class="blog-title">weixin_39815943的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">11-24</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					45
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_39815943/article/details/110063759" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"11","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39815943/article/details/110063759"}'  data-report-query='spm=1001.2101.3001.6650.11&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-11-110063759-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">C, Go, <em>Python</em>的错误处理和异常机制杂谈很多语言都混用了错误和异常，本文中，我们对错误和异常进行定义：错误(error) 是不可恢复的，只能通过修复程序或者输入输出来修正的异常(exception)是可以恢复的，可以通过捕捉异常来重新让运行中的程序继续运行但是，很多语言由于各种原因，混用了上述两个概念。C语言中没有异常，所有的异常，都是通过错误来展示(errno)，根据判断errno之后...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/Hodors/article/details/111256496"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"12","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/Hodors/article/details/111256496"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/Hodors/article/details/111256496" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"12","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/Hodors/article/details/111256496"}'  data-report-query='spm=1001.2101.3001.6650.12&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em> 3 <em>try</em> except (<em>try</em> <em>catch</em>)</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/Hodors" target="_blank"><span class="blog-title">Kp0fS的草稿纸</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-16</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1390
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/Hodors/article/details/111256496" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"12","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/Hodors/article/details/111256496"}'  data-report-query='spm=1001.2101.3001.6650.12&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-12-111256496-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>try</em>:
+    for line in open(&quot;./log.txt&quot;, &quot;r&quot;):  # 设置文件对象并读取每一行文件
+        # data.append(line)  # 将每一行文件加入到list中
+        self.teLog.append(line)
+except Exception as e:
+    print(e)
+    QMessageBox.warning(self,
+                        &quot;消息框标题&quot;,
+               .</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_30940783/article/details/98323825"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"13","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30940783/article/details/98323825"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_30940783/article/details/98323825" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"13","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30940783/article/details/98323825"}'  data-report-query='spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">pyhon中的decorator</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_30940783" target="_blank"><span class="blog-title">weixin_30940783的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">08-15</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					32
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_30940783/article/details/98323825" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"13","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30940783/article/details/98323825"}'  data-report-query='spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13-98323825-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">有用的链接：
+http://www.artima.com/weblogs/viewpost.jsp?thread=240808
+
+http://stackoverflow.com/questions/2365701/decorating-<em>python</em>-class-methods-how-do-i-pass-the-instance-to-the-decorator
+
+http://u...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~activity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"14","strategy":"2~default~BlogCommendFromBaidu~activity","dest":"https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~activity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"14","strategy":"2~default~BlogCommendFromBaidu~activity","dest":"https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html"}'  data-report-query='spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">Con<em>tr</em>oller 层返回值的公共包装类-避免每次都包装一次返回-InitializingBean增强</div>
+					<div class="tag">热门推荐</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/hu10131013" target="_blank"><span class="blog-title">hu10131013的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-07</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					10万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~activity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"14","strategy":"2~default~BlogCommendFromBaidu~activity","dest":"https://huaweicloud.csdn.net/62aac0f970abed40a0273f24.html"}'  data-report-query='spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Eactivity-14-108453535-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">场景：在微服务中，一般返回数据都会有个返回码、返回信息和返回消息体，但是每次返回时候调用或者是封装，太过麻烦，有没有什么办法不用每次都封装呢？
+
+答案是有的。
+
+
+
+返回值对象
+
+
+
+package com.study.auth.comm;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.alibaba.fastjson.serializer.Serialize..</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/keenweiwei/article/details/9039095"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/keenweiwei/article/details/9039095"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/keenweiwei/article/details/9039095" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/keenweiwei/article/details/9039095"}'  data-report-query='spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>python</em> 3.3 <em>try</em>..<em>catch</em> 小例</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/keenweiwei" target="_blank"><span class="blog-title">keenweiwei的专栏</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">06-06</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					5万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/keenweiwei/article/details/9039095" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/keenweiwei/article/details/9039095"}'  data-report-query='spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-9039095-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">s=input(&quot;input your age:&quot;)
+if s==&quot;&quot;:
+	raise Exception(&quot;input must not be empty.&quot;)
+
+<em>try</em>:
+	i=int(s)
+except Exception as err:
+	print(err)
+finally:
+	print(&quot;Goodbye!&quot;)
+
+
+运行结果：</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/hllsmart/article/details/51175447"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/hllsmart/article/details/51175447"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/hllsmart/article/details/51175447" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/hllsmart/article/details/51175447"}'  data-report-query='spm=1001.2101.3001.6650.16&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Python</em>中<em>try</em>语句的用法</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/hllsmart" target="_blank"><span class="blog-title">hllsmart的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">04-17</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					6万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/hllsmart/article/details/51175447" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/hllsmart/article/details/51175447"}'  data-report-query='spm=1001.2101.3001.6650.16&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-51175447-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">1. <em>try</em> except语句的用法，用来检测一段代码内出现的异常并将其归类输出相关信息，首先是<em>try</em>: 被检测代码段&nbsp;&nbsp;except Exception[as
+ reason]: 相关信息，举例说明：
+&gt;&gt;&gt; <em>try</em>:
+&nbsp; &nbsp; f = open(&#39;该文档不存在&#39;)
+&nbsp; &nbsp; print(f.read())
+&nbsp; &nbsp; f.close()
+except OSError:
+&nbsp; &nbsp; print</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/yayayalaila/article/details/122723894"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/yayayalaila/article/details/122723894"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/yayayalaila/article/details/122723894" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/yayayalaila/article/details/122723894"}'  data-report-query='spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>try</em>-<em>catch</em>的使用以及细节</div>
+					<div class="tag">最新发布</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/yayayalaila" target="_blank"><span class="blog-title">yayayalaila的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">01-27</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					706
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/yayayalaila/article/details/122723894" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/yayayalaila/article/details/122723894"}'  data-report-query='spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-122723894-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>try</em>-<em>catch</em>的使用以及细节
+???? Java中提供 <em>try</em> 和<em>catch</em>块来处理异常。<em>try</em>块用于包含可能出错的代码。<em>catch</em>块用于处理<em>try</em>块中发生的异常。可以根据需要在程序中有多个<em>try</em>&hellip;<em>catch</em>块。</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766"}'  data-report-query='spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">Java中级内容&mdash;&mdash;异常处理（exception handing）</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/MY_NEW_LIFE" target="_blank"><span class="blog-title">MY_NEW_LIFE的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-20</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					233
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1659949678340_86120\"}","dist_request_id":"1659949678340_86120","ab_strategy":"featuressortv2","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/MY_NEW_LIFE/article/details/108660766"}'  data-report-query='spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-108660766-blog-107506334.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">此部分学习主要参考https://how2j.cn/k/exception/exception-tutorial/332.html网站内容。以学习笔记的方式书写。</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<div id="recommendNps" class="recommend-nps-box common-nps-box">
+  <h3 class="aside-title">“相关推荐”对你有帮助么？</h3>
+  <div class="aside-content">
+      <ul class="newnps-list">
+          <li class="newnps-item" data-type="非常没帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel1.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey1.png" alt="">
+              </div>
+              <div class="newnps-text">非常没帮助</div>
+          </li>
+          <li class="newnps-item" data-type="没帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel2.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey2.png" alt="">
+              </div>
+              <div class="newnps-text">没帮助</div>
+          </li>
+          <li class="newnps-item" data-type="一般">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel3.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey3.png" alt="">
+              </div>
+              <div class="newnps-text">一般</div>
+          </li>
+          <li class="newnps-item" data-type="有帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel4.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey4.png" alt="">
+              </div>
+              <div class="newnps-text">有帮助</div>
+          </li>
+          <li class="newnps-item" data-type="非常有帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel5.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey5.png" alt="">
+              </div>
+              <div class="newnps-text">非常有帮助</div>
+          </li>
+      </ul>
+      <div class="newnps-form-box">
+      <div class="newnps-form">
+          <input type="text" placeholder="请输入建议或反馈后点击提交" class="newnps-input">
+          <span class="newnps-btn">提交</span>
+      </div>
+      </div>
+  </div>
+</div>            <div class="template-box">
+                <span>©️2022 CSDN</span>
+                <span>皮肤主题：游动-白</span>
+                <span> 设计师：我叫白小胖</span>
+                <span>
+                    <a href="https://blog.csdn.net/" class="back-home c-blue c-blue-hover c-blue-focus">返回首页</a>
+                </span>
+            </div>
+<div class="blog-footer-bottom" style="margin-top:10px;"></div>
+<script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false" type="text/javascript"></script>
+<script type="text/javascript">
+    window.csdn.csdnFooter.options = {
+        el: '.blog-footer-bottom',
+        type: 2
+    }
+</script>        </main>
+<aside class="blog_container_aside">
+<div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/weixin_45959515" target="_blank" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4121","dest":"https://blog.csdn.net/weixin_45959515","ab":"new"}'>
+                <img src="https://profile.csdnimg.cn/C/0/C/3_weixin_45959515" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div class="profile-intro-name-boxTop">
+                <a href="https://blog.csdn.net/weixin_45959515" target="_blank" class="" id="uid" title="coder613" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4122","dest":"https://blog.csdn.net/weixin_45959515","ab":"new"}'>
+                    <span class="name " username="weixin_45959515">coder613</span>
+                </a>
+                <span>
+                </span>
+                <span class="flag expert-blog">
+                <span class="bubble">CSDN认证博客专家</span>
+                </span>
+                <span class="flag company-blog">
+                <span class="bubble">CSDN认证企业博客</span>
+                </span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+                <span class="personal-home-page personal-home-years" title="已加入 CSDN 3年">码龄3年</span>
+                    <span class="personal-home-page">
+                    <a class="personal-home-certification" href="https://i.csdn.net/#/uc/profile?utm_source=14998968" target="_blank" title="暂无认证">
+                    <img src="https://csdnimg.cn/identity/nocErtification.png" alt="">
+                    暂无认证
+                    </a>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="63">
+            <a href="https://blog.csdn.net/weixin_45959515" data-report-click='{"mod":"1598321000_001","spm":"1001.2101.3001.4310"}' data-report-query="t=1">  
+                <dt><span class="count">63</span></dt>
+                <dd class="font">原创</dd>
+            </a>
+        </dl>
+        <dl class="text-center" data-report-click='{"mod":"1598321000_002","spm":"1001.2101.3001.4311"}' title="282923">
+            <a href="https://blog.csdn.net/rank/list/weekly" target="_blank">
+                <dt><span class="count">28万+</span></dt>
+                <dd class="font">周排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" title="882001">
+            <a href="https://blog.csdn.net/rank/list/total" data-report-click='{"mod":"1598321000_003","spm":"1001.2101.3001.4312"}' target="_blank">
+                <dt><span class="count">88万+</span></dt>
+                <dd class="font">总排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="29077">  
+            <dt><span class="count">2万+</span></dt>
+            <dd>访问</dd>
+        </dl>
+        <dl class="text-center" title="4级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/blogdevteam/article/details/103478461" target="_blank">
+                <img class="level" src="https://csdnimg.cn/identity/blog4.png">
+            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="871">
+            <dt><span class="count">871</span></dt>
+            <dd>积分</dd>
+        </dl>
+         <dl class="text-center" id="fanBox" title="3">
+            <dt><span class="count" id="fan">3</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="23">
+            <dt><span class="count">23</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="2">
+            <dt><span class="count">2</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" title="88">
+            <dt><span class="count">88</span></dt>
+            <dd>收藏</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer" data-report-view='{"spm":"3001.4296"}'>
+        <div class="badge-box d-flex">
+            <div class="badge d-flex">
+                <div class="icon-badge" title="分享学徒">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/fenxiangxuetu@240.png" alt="分享学徒">
+                    </div>
+                </div>
+                <div class="icon-badge" title="分享小兵">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/fengxiangxiaobing@240.png" alt="分享小兵">
+                    </div>
+                </div>
+                <div class="icon-badge" title="持之以恒">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/chizhiyiheng@240.png" alt="持之以恒">
+                    </div>
+                </div>
+                <div class="icon-badge" title="1024勋章">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/1024@240.png" alt="1024勋章">
+                    </div>
+                </div>
+                <div class="icon-badge" title="笔耕不辍">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/70592b2299594e37aedcaa91fc52a294.png" alt="笔耕不辍">
+                    </div>
+                </div>
+                <div class="icon-badge" title="勤写标兵">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/qixiebiaobing4@240.png" alt="勤写标兵">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-intro-name-boxOpration">
+        <div class="opt-letter-watch-box">
+        <a class="bt-button personal-letter" href="https://im.csdn.net/chat/weixin_45959515" target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box"> 
+            <a class="personal-watch bt-button" id="btnAttent" >关注</a>  
+        </div>
+    </div>
+</div>
+ <div id="asideSearchArticle" class="aside-box">
+	<div class="aside-content search-comter">
+    <div class="aside-search aside-search-blog">         
+        <input type="text" class="input-serch-blog" name="" autocomplete="off" value="" id="search-blog-words" placeholder="搜博主文章">
+        <a class="btn-search-blog">
+                    <img src="//csdnimg.cn/cdn/content-toolbar/csdn-sou.png?v=1587021042">
+        </a>
+    </div>
+    </div>
+</div><div class="box-shadow mb8" data-pid="blog" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+        <div id="kp_box_56" data-pid="56"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076724771190722"
+     crossorigin="anonymous"></script>
+<!-- ~PC-博客-博文页-左侧-视窗-* -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="3806919815"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=56&adId=6815&a=6815&c=0&k=python try catch&spm=1001.2101.3001.5000&articleId=107506334&d=1&t=3&u=5d6ab72c60994beb968ba82ad865edf1" style="display: block;width: 0px;height: 0px;"></div>
+    </div>
+</div>
+
+
+
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+			<li>
+				<a href="https://blog.csdn.net/weixin_45959515/article/details/107506334" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/weixin_45959515/article/details/107506334","ab":"new"}'>
+				python try catch
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">8876</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/weixin_45959515/article/details/107263305" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/weixin_45959515/article/details/107263305","ab":"new"}'>
+				fmin函数以及fmax
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">4270</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/weixin_45959515/article/details/107263234" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/weixin_45959515/article/details/107263234","ab":"new"}'>
+				memset二维数组
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">2627</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/weixin_45959515/article/details/109267944" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/weixin_45959515/article/details/109267944","ab":"new"}'>
+				memset(a, 0x3f, sizeof(a))
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">1851</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/weixin_45959515/article/details/110530899" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/weixin_45959515/article/details/110530899","ab":"new"}'>
+				最近点对问题C语言源代码
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">1607</span>
+                </a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/weixin_45959515/article/details/110530899#comments_21023494" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/weixin_45959515/article/details/110530899#comments_21023494","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/weixin_45959515/article/details/110530899#comments_21023494","ab":"new"}'>最近点对问题C语言源代码</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/zuozuoqy" class="user-name" target="_blank">翻斗花园2号楼1001室: </a>
+                    <span class="code-comments">博主，你的代码当点数多的时候就不对了呀，怎么回事呢<img src="https://g.csdnimg.cn/static/face/emoji/051.png" alt='表情包' ></span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/weixin_45959515/article/details/111024252#comments_14943582" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252#comments_14943582","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252#comments_14943582","ab":"new"}'>ccf区块链</a>
+                <p class="comment ellipsis">
+                    <a href="https://waterwang.blog.csdn.net" class="user-name" target="_blank">water___Wang: </a>
+                    <span class="code-comments">不错，666，加油~</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewNps" class="aside-box common-nps-box">
+    <h3 class="aside-title">您愿意向朋友推荐“博客详情页”吗？</h3>
+    <div class="aside-content">
+        <ul class="newnps-list">
+            <li class="newnps-item" data-type="强烈不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel1.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey1.png" alt="">
+                </div>
+                <div class="newnps-text">强烈不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel2.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey2.png" alt="">
+                </div>
+                <div class="newnps-text">不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="一般般">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel3.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey3.png" alt="">
+                </div>
+                <div class="newnps-text">一般般</div>
+            </li>
+            <li class="newnps-item" data-type="推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel4.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey4.png" alt="">
+                </div>
+                <div class="newnps-text">推荐</div>
+            </li>
+            <li class="newnps-item" data-type="强烈推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel5.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey5.png" alt="">
+                </div>
+                <div class="newnps-text">强烈推荐</div>
+            </li>
+        </ul>
+        <div class="newnps-form-box">
+        <div class="newnps-form">
+            <input type="text" placeholder="请输入建议或反馈后点击提交" class="newnps-input">
+            <span class="newnps-btn">提交</span>
+        </div>
+        </div>
+    </div>
+</div>
+<div id="asideArchive" class="aside-box" style=" width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/124119177" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/124119177","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/124119177","ab":"new"}'>【无标题】</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/111024252" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252","ab":"new"}'>ccf区块链</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/110918404" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/110918404","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/110918404","ab":"new"}'>ccf化学方程式</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2022&amp;month=04" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2022&amp;month=04"}'><span class="year">2022年</span><span class="num">1篇</span></a></div>
+                <div class="archive-list-item"><a href="https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2020&amp;month=12" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2020&amp;month=12"}'><span class="year">2020年</span><span class="num">62篇</span></a></div>
+        </div>
+    </div>
+</div>
+	<div id="footerRightAds" class="isShowFooterAds">
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076724771190722"
+     crossorigin="anonymous"></script>
+<!-- ~PC-博客-博文页-左侧-视窗-* -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="3806919815"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&adId=6816&a=6816&c=0&k=python try catch&spm=1001.2101.3001.5001&articleId=107506334&d=1&t=3&u=ee8b070c3f3a4735913110b692e69d9f" style="display: block;width: 0px;height: 0px;"></div>
+		</div>
+	</div>
+    <!-- 详情页显示目录 -->
+<!--文章目录-->
+<div id="asidedirectory" class="aside-box">
+    <div class='groupfile' id="directory">
+        <h3 class="aside-title">目录</h3>
+        <div class="align-items-stretch group_item">
+            <div class="pos-box">
+            <div class="scroll-box">
+                <div class="toc-box"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</aside>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-tooltip/2.7/user-tooltip.js"></script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-medal/2.0.0/user-medal.js"></script>    </div>
+<div class="recommend-right align-items-stretch clearfix" id="rightAside" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right" >
+                                <div class="programmer1Box">
+                        <div id="kp_box_530" data-pid="530"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076724771190722"
+     crossorigin="anonymous"></script>
+<!-- ~PC-博客-博文页-右侧-视窗-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="6842192987"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=530&adId=6859&a=6859&c=0&k=python try catch&spm=1001.2101.3001.4647&articleId=107506334&d=1&t=3&u=588c3c7fac9241c6ac0122f1333be41d" style="display: block;width: 0px;height: 0px;"></div>
+                    </div>
+            <div class='flex-column aside-box groupfile' id="groupfile">
+                <div class="groupfile-div">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <div id="recommendAdBox">
+                    <div id="kp_box_479" data-pid="479"><script type="text/javascript" src="https://cdn.wwads.cn/js/makemoney.js" async></script>
+ <div class="wwads-cn wwads-vertical" data-id="149" style="max-width:300px;margin-top:0;background-color: #fff;margin-bottom: 5px;"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=479&adId=6860&a=6860&c=0&k=python try catch&spm=1001.2101.3001.4834&articleId=107506334&d=1&t=3&u=df819f7911094905ad4327c723219782" style="display: block;width: 0px;height: 0px;"></div>
+                </div>
+<div id="asideArchive" class="aside-box" style=" width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/124119177" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/124119177","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/124119177","ab":"new"}'>【无标题】</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/111024252" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/111024252","ab":"new"}'>ccf区块链</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/weixin_45959515/article/details/110918404" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/weixin_45959515/article/details/110918404","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/weixin_45959515/article/details/110918404","ab":"new"}'>ccf化学方程式</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2022&amp;month=04" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2022&amp;month=04"}'><span class="year">2022年</span><span class="num">1篇</span></a></div>
+                <div class="archive-list-item"><a href="https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2020&amp;month=12" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/weixin_45959515?type=blog&amp;year=2020&amp;month=12"}'><span class="year">2020年</span><span class="num">62篇</span></a></div>
+        </div>
+    </div>
+</div>
+        </div>
+    </aside>
+</div>
+
+<div class="recommend-right1  align-items-stretch clearfix" id="rightAsideConcision" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right-concision" >
+            <div class='flex-column aside-box groupfile' id="groupfileConcision">
+                <div class="groupfile-div1">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</div>
+<div class="mask-dark"></div>
+<script type="text/javascript">
+    var timert = setInterval(function() {
+      sideToolbar = $(".csdn-side-toolbar");
+      if (sideToolbar.length > 0) {
+        sideToolbar.css('cssText','bottom:64px !important;')
+        clearInterval(timert);
+      }
+    }, 200);
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<div class="skin-boxshadow"></div>
+<div class="directory-boxshadow"></div>
+<div class="comment-side-box-shadow comment-side-tit-close" id="commentSideBoxshadow">
+<div class="comment-side-content">
+	<div class="comment-side-tit">
+	<span class="comment-side-tit-count">评论</span>	
+	<img class="comment-side-tit-close" src="https://csdnimg.cn/release/blogv2/dist/pc/img/closeBt.png"></div>
+	<div id="pcCommentSideBox" class="comment-box comment-box-new2 unlogin-comment-box-new" style="display:none">
+	</div>
+	<div id="pcFlodCommentSideBox" class="pc-flodcomment-sidebox">
+		<div class="comment-fold-tit"><span id="lookUnFlodComment" class="back"><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentArrowLeftWhite.png" alt=""></span>被折叠的&nbsp;<span class="count"></span>&nbsp;条评论
+		 <a href="https://blogdev.blog.csdn.net/article/details/122245662" class="tip" target="_blank">为什么被折叠?</a>
+		 <a href="https://bbs.csdn.net/forums/FreeZone" class="park" target="_blank">
+		 <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/iconPark.png">到【灌水乐园】发言</a>                                
+		</div>
+		<div class="comment-fold-content"></div>
+		<div id="lookBadComment" class="look-bad-comment side-look-comment">
+			<a class="look-more-comment">查看更多评论<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentArrowDownWhite.png" alt=""></a>
+		</div>
+	</div>
+</div>
+</div>
+<div id="rewardNew" class="reward-popupbox-new">
+	<p class="rewad-title">打赏作者<span class="reward-close"><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/closeBt.png"></span></p>
+	<dl class="profile-box">
+		<dd>
+		<a href="https://blog.csdn.net/weixin_45959515" data-report-click='{"mod":"popu_379","dest":"https://blog.csdn.net/weixin_45959515","ab":"new"}'>
+			<img src="https://profile.csdnimg.cn/C/0/C/3_weixin_45959515" class="avatar_pic">
+		</a>
+		</dd>
+		<dt>
+			<p class="blog-name">coder613</p>
+			<p class="blog-discript">你的鼓励将是我创作的最大动力</p>
+		</dt>
+	</dl>
+	<div class="reward-box-new">
+			<div class="reward-content"><div class="reward-right"></div></div>
+	</div>
+	<div class="money-box">
+				<span class="choose-money choosed" data-id="2">¥2</span>
+				<span class="choose-money " data-id="4">¥4</span>
+				<span class="choose-money " data-id="6">¥6</span>
+				<span class="choose-money " data-id="10">¥10</span>
+				<span class="choose-money " data-id="20">¥20</span>
+				<input id="customizeMoney" class="customize-money" name="" type="" value="" placeholder="自定义"/>
+				<div class="customize-tip">输入1-500的整数</div>
+	</div>
+	<div class="pay-box">
+		<div class="pay-type-blance pay-type active" data-type="blance">
+			<img class="unchoose" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnChoose.png" alt="">
+			<img class="choose"src="https://csdnimg.cn/release/blogv2/dist/pc/img/newChoose.png" alt="">
+			<span class="pay-type-name">余额支付</span>
+			<span class="pay-type-num">(余额：-- )</span>
+		</div>
+		<div class="pay-type-money pay-type" data-type="money">
+			<img class="unchoose" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnChoose.png" alt="">
+			<img class="choose"src="https://csdnimg.cn/release/blogv2/dist/pc/img/newChoose.png" alt="">
+			<span class="pay-type-name">扫码支付</span>
+		</div>
+	</div>
+	<div class="sure-box">
+		<div class="sure-box-money">
+			<div class="code-box">
+				<div class="code-num-box">
+					<span class="code-name">扫码支付：</span><span class="code-num">¥2</span>
+				</div>
+				<div class="code-img-box">
+					<div class="renovate">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png">
+					<span>获取中</span>
+					</div>
+				</div>
+				<div class="code-pay-box">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newWeiXin.png" alt="">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newZhiFuBao.png" alt="">
+					<span>扫码支付</span>
+				</div>
+			</div>
+		</div>
+		<div class="sure-box-blance">
+			<p class="tip">您的余额不足，请更换扫码支付或<a target="_blank" data-report-click='{"mod":"1597646289_003","spm":"1001.2101.3001.4302"}' href="https://i.csdn.net/#/wallet/balance/recharge?utm_source=RewardVip" class="go-invest">充值</a></p>
+			<p class="is-have-money"><a class="reward-sure">打赏作者</a></p>
+		</div>
+	</div>
+</div>
+<div class="pay-code">
+    <div class="pay-money">实付<span class="pay-money-span" data-nowprice='' data-oldprice=''>元</span></div>
+    <div class="content-blance"><a class="blance-bt" href="javascript:;">使用余额支付</a></div>
+    <div class="content-code">
+    <div id="payCode" data-id="">
+            <div class="renovate">
+                <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png">
+                <span>点击重新获取</span>
+            </div>
+        </div>
+        <div class="pay-style"><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/weixin.png"></span><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/zhifubao.png"></span><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/jingdong.png"></span><span class="text">扫码支付</span></div>
+    </div>
+    <div class="bt-close"><svg t="1567152543821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10924" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs><style type="text/css"></style></defs><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="10925"></path></svg></div>
+    <!-- <p style="margin-top: 8px;font-size: 14px;" class="text-center">支付成功即可阅读</p> -->
+    <div class="pay-balance">
+    <input type="radio" class="pay-code-radio" data-type="details"> 
+    <span class="span">钱包余额</span>
+    <span class="balance" style="color:#FC5531;font-size:14px;">0</span>  
+    <div class="pay-code-tile">
+        <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-help.png" alt="">
+        <div class="pay-code-content">
+            <div class="span">
+                <p class="title">抵扣说明：</p>
+                <p> 1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。<br> 2.余额无法直接购买下载，可以购买VIP、C币套餐、付费专栏及课程。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <a class="pay-balance-con" href="https://i.csdn.net/#/wallet/balance/recharge" target="_blank"><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/recharge.png" alt=""><span  >余额充值</span></a>
+</div>
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+<div class="keyword-dec-box" id="keywordDecBox"></div>
+</body>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_highlight-7e7de84184.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_common-fbcbe8567e.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/edit_copy_code-ce0f06f94b.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-light.css">
+<script src="https://g.csdnimg.cn/user-accusation/1.0.5/user-accusation.js" type="text/javascript" ></script>
+<script>
+ // 全局声明
+ if (window.csdn === undefined) {
+      window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            report:{
+                isShow: true,
+            },
+            qr: {
+                isShow: false,
+            },
+            guide: {
+                isShow: true
+            }
+        }
+    }
+    $(function(){
+        $(document).on('click',"a.option-box[data-type='report']",function() {
+            window.csdn.userLogin.loadAjax(function(res){
+                window.csdn.feedback({
+                    "type":'blog',
+                    "rtype":'article',
+                    "rid":articleId,
+                    "reportedName":username,
+                    "submitOptions":{
+                        "title":articleTitle,
+                        "contentUrl":articleDetailUrl
+                    },
+                    "callback":function(){
+                        showToast({
+                            text: "感谢您的举报，我们会尽快审核！",
+                            bottom: '10%', 
+                            zindex: 9000, 
+                            speed: 500,
+                            time: 1500
+                        });
+                    }
+                })
+            })
+        });
+    })
+</script>
+    <script src="https://g.csdnimg.cn/baidu-search/1.0.12/baidu-search.js"  type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/download/old_static/js/qrcode.js"></script>
+<script src="https://g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js"></script>
+<script src="https://g.csdnimg.cn/user-ordercart/3.0.1/user-ordercart.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/user-ordertip/5.0.1/user-ordertip.js" type="text/javascript" ></script>
+<script src="https://g.csdnimg.cn/order-payment/4.0.1/order-payment.js" type="text/javascript" ></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/common-a1dfbf1dc3.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/detail-6a1ef1ff5f.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/column-6e3d52e96c.min.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/side-toolbar/3.4/side-toolbar.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/copyright/1.0.4/copyright.js" type="text/javascript"></script>
+<script>
+    $(".MathJax").remove();
+    if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+        $('div.markdown_views')[0].className = 'markdown_views';
+    }
+</script>
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none",
+                ignoreClass:"title-article"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/common/csdn-login-box/csdn-login-box.js"></script></html>
